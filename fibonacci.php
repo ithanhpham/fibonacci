@@ -67,11 +67,8 @@ class fibonacci {
     
         //recursive call
         if($n[1] == 'r') { 
-            //init the index for the sequence
-    //        $c = 1;
             for($i=1;$i <= $n[2]; $i++) {
                 echo $myFibo->process($i) . ' ';
-     //           $c++; //increment working index until it hits the index set by user, $n
             }
         } else {
             //else iterative call
