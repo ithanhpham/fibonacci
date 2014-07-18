@@ -28,7 +28,6 @@ class fibonacci {
     //iterative process
     public function iter_process($n) {
 
-        $x = 0;
         $num1 = 0;
         $num2 = 1;
         $sum  = 1;
@@ -37,7 +36,8 @@ class fibonacci {
         print $sum . ' ';
 
         //iteratively get the numbers
-        for($i=0; $i < $n; $i++){
+        //start at $i=2 because first index is 1, the second 1 is calculated
+        for($i=2; $i <= $n; $i++){
             $sum = $num1 + $num2;
          
             $num1 = $num2;
@@ -68,10 +68,10 @@ class fibonacci {
         //recursive call
         if($n[1] == 'r') { 
             //init the index for the sequence
-            $c = 1;
-            for($i=0;$i <= $n[2]; $i++) {
-                echo $myFibo->process($c) . ' ';
-                $c++; //increment working index until it hits the index set by user, $n
+    //        $c = 1;
+            for($i=1;$i <= $n[2]; $i++) {
+                echo $myFibo->process($i) . ' ';
+     //           $c++; //increment working index until it hits the index set by user, $n
             }
         } else {
             //else iterative call
